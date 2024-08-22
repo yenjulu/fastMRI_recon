@@ -1,0 +1,110 @@
+config path: configs/fastmri_varnet.yaml
+workspace: ./workspace/fastmri_varnet,k=5,n=1
+description: ""
+
+
+train start: 2024-08-19 09:41:39
+-----------------------
+epoch 0/50 train score: 21.5979	loss: 0.0242
+epoch 0/50 val score: 22.6451	loss: 0.0032
+epoch 1/50 train score: 25.0782	loss: 0.0021
+epoch 1/50 val score: 25.6511	loss: 0.0016
+epoch 2/50 train score: 26.0318	loss: 0.0017
+epoch 2/50 val score: 27.1740	loss: 0.0011
+epoch 3/50 train score: 27.4872	loss: 0.0013
+epoch 3/50 val score: 25.1994	loss: 0.0018
+epoch 4/50 train score: 26.5816	loss: 0.0017
+epoch 4/50 val score: 27.1238	loss: 0.0011
+epoch 5/50 train score: 27.8899	loss: 0.0012
+epoch 5/50 val score: 28.9509	loss: 0.0008
+epoch 6/50 train score: 27.6162	loss: 0.0013
+epoch 6/50 val score: 28.9155	loss: 0.0008
+epoch 7/50 train score: 28.4594	loss: 0.0011
+epoch 7/50 val score: 29.4188	loss: 0.0007
+epoch 8/50 train score: 28.2929	loss: 0.0011
+epoch 8/50 val score: 26.2503	loss: 0.0013
+epoch 9/50 train score: 28.5263	loss: 0.0010
+epoch 9/50 val score: 27.0491	loss: 0.0011
+epoch 10/50 train score: 28.4402	loss: 0.0010
+epoch 10/50 val score: 28.9883	loss: 0.0007
+epoch 11/50 train score: 27.4972	loss: 0.0013
+epoch 11/50 val score: 26.6130	loss: 0.0013
+epoch 12/50 train score: 27.9336	loss: 0.0012
+epoch 12/50 val score: 27.6771	loss: 0.0010
+epoch 13/50 train score: 28.3365	loss: 0.0011
+epoch 13/50 val score: 27.1592	loss: 0.0011
+epoch 14/50 train score: 27.9806	loss: 0.0012
+epoch 14/50 val score: 30.1822	loss: 0.0006
+epoch 15/50 train score: 29.0850	loss: 0.0009
+epoch 15/50 val score: 28.0164	loss: 0.0010
+epoch 16/50 train score: 29.6328	loss: 0.0008
+epoch 16/50 val score: 30.6738	loss: 0.0005
+epoch 17/50 train score: 30.3531	loss: 0.0007
+epoch 17/50 val score: 31.0605	loss: 0.0004
+epoch 18/50 train score: 30.2625	loss: 0.0007
+epoch 18/50 val score: 31.1643	loss: 0.0004
+epoch 19/50 train score: 30.9631	loss: 0.0006
+epoch 19/50 val score: 29.5060	loss: 0.0006
+epoch 20/50 train score: 31.2082	loss: 0.0005
+epoch 20/50 val score: 31.6221	loss: 0.0004
+epoch 21/50 train score: 31.5329	loss: 0.0005
+epoch 21/50 val score: 31.9633	loss: 0.0003
+epoch 22/50 train score: 32.1079	loss: 0.0004
+epoch 22/50 val score: 32.1573	loss: 0.0004
+epoch 23/50 train score: 31.6073	loss: 0.0005
+epoch 23/50 val score: 28.7694	loss: 0.0007
+epoch 24/50 train score: 32.8113	loss: 0.0004
+epoch 24/50 val score: 28.6034	loss: 0.0007
+epoch 25/50 train score: 30.8544	loss: 0.0006
+epoch 25/50 val score: 31.2983	loss: 0.0004
+epoch 26/50 train score: 32.8231	loss: 0.0004
+epoch 26/50 val score: 33.1455	loss: 0.0003
+epoch 27/50 train score: 33.4708	loss: 0.0003
+epoch 27/50 val score: 34.3733	loss: 0.0002
+epoch 28/50 train score: 33.0109	loss: 0.0004
+epoch 28/50 val score: 35.5324	loss: 0.0001
+epoch 29/50 train score: 34.1288	loss: 0.0003
+epoch 29/50 val score: 34.5786	loss: 0.0002
+epoch 30/50 train score: 34.4274	loss: 0.0003
+epoch 30/50 val score: 35.1136	loss: 0.0002
+epoch 31/50 train score: 34.2152	loss: 0.0003
+epoch 31/50 val score: 34.5792	loss: 0.0002
+epoch 32/50 train score: 33.7647	loss: 0.0003
+epoch 32/50 val score: 34.5633	loss: 0.0002
+epoch 33/50 train score: 33.5306	loss: 0.0003
+epoch 33/50 val score: 33.7254	loss: 0.0002
+epoch 34/50 train score: 34.7015	loss: 0.0003
+epoch 34/50 val score: 36.4701	loss: 0.0001
+epoch 35/50 train score: 34.8764	loss: 0.0003
+epoch 35/50 val score: 34.6863	loss: 0.0002
+epoch 36/50 train score: 33.6148	loss: 0.0003
+epoch 36/50 val score: 35.4509	loss: 0.0001
+epoch 37/50 train score: 34.7010	loss: 0.0003
+epoch 37/50 val score: 36.1595	loss: 0.0001
+epoch 38/50 train score: 35.1609	loss: 0.0002
+epoch 38/50 val score: 33.3101	loss: 0.0003
+epoch 39/50 train score: 34.7159	loss: 0.0003
+epoch 39/50 val score: 34.2436	loss: 0.0002
+epoch 40/50 train score: 35.2224	loss: 0.0002
+epoch 40/50 val score: 35.0909	loss: 0.0002
+epoch 41/50 train score: 34.9413	loss: 0.0002
+epoch 41/50 val score: 32.2607	loss: 0.0003
+epoch 42/50 train score: 33.1095	loss: 0.0004
+epoch 42/50 val score: 34.0343	loss: 0.0002
+epoch 43/50 train score: 34.5759	loss: 0.0003
+epoch 43/50 val score: 33.3843	loss: 0.0002
+epoch 44/50 train score: 34.4798	loss: 0.0003
+epoch 44/50 val score: 35.4900	loss: 0.0001
+epoch 45/50 train score: 35.3066	loss: 0.0002
+epoch 45/50 val score: 35.9247	loss: 0.0001
+epoch 46/50 train score: 35.5953	loss: 0.0002
+epoch 46/50 val score: 33.6163	loss: 0.0002
+epoch 47/50 train score: 35.9584	loss: 0.0002
+epoch 47/50 val score: 36.3370	loss: 0.0001
+epoch 48/50 train score: 35.6600	loss: 0.0002
+epoch 48/50 val score: 35.7921	loss: 0.0001
+epoch 49/50 train score: 35.3017	loss: 0.0002
+epoch 49/50 val score: 36.5644	loss: 0.0001
+-----------------------
+total train time: 138.31 min
+best score: 36.5644

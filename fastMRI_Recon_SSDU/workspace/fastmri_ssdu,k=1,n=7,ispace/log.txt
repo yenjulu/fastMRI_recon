@@ -1,0 +1,7 @@
+config path: configs/fastmri_ssdu.yaml
+workspace: ./workspace/fastmri_ssdu,k=1,n=7,ispace
+description: ""
+
+
+train start: 2024-08-21 23:30:51
+-----------------------

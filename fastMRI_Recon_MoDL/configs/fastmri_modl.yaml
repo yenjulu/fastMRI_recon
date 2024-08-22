@@ -1,0 +1,33 @@
+config_name: fastmri_modl,k=7,n=1
+description: "\"\""
+
+k_iters: 7
+n_layers: 1
+
+epochs: 50
+
+dataset_name: fastmri_dataset
+
+dataset_params:
+  dataset_path: '../data/fastmri_dataset_small.hdf5'
+  mask_path: '../data/mask_poisson_accelx8_396_768.mat'
+  sigma: 0.01
+
+val_data: true
+batch_size: 1
+model_name: base_modl
+
+restore_weights: False   #False, best, inter, final
+restore_path: 'workspace/fastmri_modl,k=3,n=1/checkpoints/'
+
+loss_name: MSE
+score_names: ['PSNR', 'SSIM']
+optim_name: Adam
+optim_params:
+  lr: 0.01
+gradient_clip: true
+
+scheduler_name: StepLR
+scheduler_params:
+  step_size: 5
+  gamma: 0.1

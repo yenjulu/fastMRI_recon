@@ -1,0 +1,40 @@
+config path: configs/fastmri_ssdu.yaml
+workspace: ./workspace/fastmri_ssdu,k=1,n=5,ispace
+description: ""
+
+
+train start: 2024-08-20 22:16:59
+-----------------------
+epoch 0/50 train score: 17.7850	loss: 0.1460
+epoch 0/50 val score: 13.3378	loss: 0.0968
+epoch 1/50 train score: 18.7670	loss: 0.1028
+epoch 1/50 val score: 18.7214	loss: 0.0912
+epoch 2/50 train score: 21.9864	loss: 0.0979
+epoch 2/50 val score: 24.3538	loss: 0.0908
+epoch 3/50 train score: 23.1018	loss: 0.0969
+epoch 3/50 val score: 15.8897	loss: 0.0942
+epoch 4/50 train score: 23.8525	loss: 0.0971
+epoch 4/50 val score: 30.9453	loss: 0.0832
+epoch 5/50 train score: 24.0108	loss: 0.0953
+epoch 5/50 val score: 30.5406	loss: 0.0863
+epoch 6/50 train score: 22.1417	loss: 0.1770
+epoch 6/50 val score: 23.8852	loss: 0.2045
+epoch 7/50 train score: 13.3201	loss: 0.3604
+epoch 7/50 val score: 16.0580	loss: 0.2182
+epoch 8/50 train score: 14.5195	loss: 0.3278
+epoch 8/50 val score: 19.1711	loss: 0.2197
+epoch 9/50 train score: 18.1145	loss: 0.2317
+epoch 9/50 val score: 21.9807	loss: 0.1971
+epoch 10/50 train score: 15.0665	loss: 0.2544
+epoch 10/50 val score: 25.1501	loss: 0.2004
+epoch 11/50 train score: 12.5279	loss: 0.3636
+epoch 11/50 val score: 15.1075	loss: 0.2109
+epoch 12/50 train score: 13.7870	loss: 0.2768
+epoch 12/50 val score: 12.1511	loss: 0.2331
+epoch 13/50 train score: 16.1703	loss: 0.2392
+epoch 13/50 val score: 24.8624	loss: 0.2114
+epoch 14/50 train score: 19.5525	loss: 0.2351
+epoch 14/50 val score: 11.6762	loss: 0.3118
+-----------------------
+total train time: 163.10 min
+best score: 30.9453
