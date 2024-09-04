@@ -11,9 +11,9 @@ from torchsummary import summary
 import sigpy as sp
 
 matplotlib.use('Agg')  # Or another backend suitable for your system
-sys.path.append(os.path.abspath('../'))
+
 from utils import psnr, ssim
-from models.mri import fftc, ifftc
+from proj_models.mri import fftc, ifftc
 
 
 def plot_images_comparison(image_list, saved_name, save_dir='./plot'):
@@ -51,16 +51,7 @@ def plot_images(image_list, saved_name, save_dir='./plot'):
     
     plt.savefig(f'{save_dir}/{saved_name}.png', dpi=600)
     plt.close()
-
-def file_keys(filename):
-    with h5py.File(filename, 'r') as file:
-        keys = list(file.keys())
-        print("Keys: %s" % keys)
-
-        for key in keys:
-            dataset = file[key]
-            print(f"Shape: {dataset.shape}, Type: {dataset.dtype}")  
-            
+          
 def get_model_state_dict(filename):
     checkpoint = torch.load(filename)
     
@@ -87,18 +78,5 @@ def model_parameters(model):
 
     print(f"Total trainable parameters: {total_params}")
 
-def get_coil_img_sizes():
-    coil_sizes = []
-    img_sizes = []
 
-    unique, counts = np.unique(img_sizes, return_counts=True)
-    print(dict(zip(unique, counts)))
-    
-    unique, counts = np.unique(coil_sizes, return_counts=True)
-    print(dict(zip(unique, counts))) # {8: 2, 12: 1, 16: 88, 18: 2, 20: 61}
-
-
-
- 
-# plot_images(img_list, saved_name='', save_dir='./plot') 
 

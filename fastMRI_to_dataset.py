@@ -10,8 +10,8 @@ import sigpy as sp
 from sigpy.mri import samp, app
 from scipy.io import savemat
 
-from fastMRI_Recon_MoDL.models import mri
-from fastMRI_Recon_SSDU.models.ssdu_masks import ssdu_masks
+from proj_models import mri
+from proj_models.ssdu_masks import ssdu_masks
 
 def gen_fastMRI_tst_dataset():
     '''
@@ -46,11 +46,11 @@ def gen_fastMRI_h5_dataset():
     y = 396 
     
     with h5py.File(output_file, 'a') as h5_combined:
-        for filename in train_filenames[:20]:
+        for filename in train_filenames[:40]:
             prefix = 'trn'
             process_file(source_dir, filename, prefix, h5_combined, coil, x, y)
             
-        for filename in val_filenames[:10]:
+        for filename in val_filenames[:20]:
             prefix = 'tst'
             process_file(source_dir, filename, prefix, h5_combined, coil, x, y)
             
@@ -111,12 +111,12 @@ def fastMRI_to_dataset(dataset_path, x, y):
     return Csm, Org, kspace
 
 def gen_mask():
-    mask_poisson = samp.poisson([396, 768], 2).astype(np.int8) 
-    savemat('data/mask_poisson_accelx2_396_768.mat', {'mask': mask_poisson})
+    mask_poisson = samp.poisson([396, 768], 8).astype(np.int8) 
+    savemat('data/mask_poisson_accelx8_396_768.mat', {'mask': mask_poisson})
 
 def gen_trn_loss_mask():
     ssdumask = ssdu_masks()
-    output_file='data/trn_loss_mask_accelx2_ssdu.hdf5'
+    output_file='data/trn_loss_mask_accelx8_ssdu.hdf5'
     # Keys: ['loss_mask', 'trn_mask']
     # Shape: (2500, 396, 768), Type: int8
     # Shape: (2500, 396, 768), Type: int8
@@ -148,14 +148,44 @@ def gen_trn_loss_mask():
 def random_set_train_val_files():
     directory = 'data/brain/multicoil_train'
     pattern = 'file_brain_AXT2_210_6001'
+    
     files = []
+    coils = []
+    imgs = []
+    count = 0
+    
     for filename in os.listdir(directory):
+        
+        
         if filename.startswith(pattern):
             file_path = os.path.join(directory, filename)
 
             with h5py.File(file_path, 'r') as hdf:
-                if 'kspace' in hdf and hdf['kspace'].shape[1] >= 16:
-                    files.append(filename)
+                
+                if count == 0:
+                    keys = list(hdf.keys())
+                    print("Keys: %s" % keys) # 'ismrmrd_header', 'kspace', 'reconstruction_rss'
+                    
+                    for key in keys:
+                        dataset = hdf[key]
+                        print(f"Shape: {dataset.shape}, Type: {dataset.dtype}") 
+                
+                if 'kspace' in hdf:
+                    coil = hdf['kspace'].shape[1]
+                    img = hdf['kspace'].shape[2:]
+                    coils.append(coil)
+                    imgs.append(img)
+                    
+                    if hdf['kspace'].shape[1] >= 16:
+                        files.append(filename)
+                        
+            count = count + 1
+
+    unique, counts = np.unique(imgs, return_counts=True)
+    print(dict(zip(unique, counts)))  # {396: 172, 768: 172}
+    
+    unique, counts = np.unique(coils, return_counts=True)
+    print(dict(zip(unique, counts)))  # {8: 2, 12: 1, 16: 97, 18: 2, 20: 70}
 
     np.random.shuffle(files)
     num_train = int(len(files) * 0.8)
@@ -191,5 +221,7 @@ def random_set_tst_files():
     savemat('filenames_test.mat', data_dict)
 
 if __name__ == "__main__":
-    gen_fastMRI_h5_dataset()
+
+    gen_trn_loss_mask()
+    # gen_fastMRI_h5_dataset()
     
