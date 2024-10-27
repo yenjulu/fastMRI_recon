@@ -46,7 +46,11 @@ def get_model(model_name, model_params, device):
     if model_name == 'base_modl_ssdu':
         from proj_models.modl import MoDL_ssdu
         model = MoDL_ssdu(**model_params)
-        
+
+    if model_name == 'base_varnet':
+        from proj_models.varnet import VarNet
+        model = VarNet(**model_params)
+                
     # if device == 'cuda' and torch.cuda.device_count()>1:
     #     model = nn.DataParallel(model)
     model.to(device)

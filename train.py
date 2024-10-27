@@ -152,7 +152,7 @@ def main(args):
             if args.write_lr:
                 writers[phase].add_scalar('lr', optimizer.param_groups[0]['lr'], epoch)
             if args.write_image > 0 and (epoch % args.write_image == 0):
-                writers[phase].add_figure('img', display_img(np.abs(r2c(x[-1].detach().cpu().numpy())), mask[-1].detach().cpu().numpy(), \
+                writers[phase].add_figure('img', display_img_modl(np.abs(r2c(x[-1].detach().cpu().numpy())), mask[-1].detach().cpu().numpy(), \
                     y[-1], y_pred[-1], y_dn[-1], epoch_score[val_score_name]), epoch)
             if args.write_lambda:
                 print('lam:', model.dc.lam.item())
@@ -197,13 +197,13 @@ def main(args):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="")
-    parser.add_argument("--config", type=str, required=False, default="configs/base_modl,k=10.yaml",
+    parser.add_argument("--config", type=str, required=False, default="configs/fastmri.yaml",
                         help="config file path")
     parser.add_argument("--workspace", type=str, default='./workspace')
     parser.add_argument("--tensorboard_dir", type=str, default='./runs')
     parser.add_argument("--save_step", type=int, default=1)
     parser.add_argument("--write_lr", type=bool, default=True)
-    parser.add_argument("--write_image", type=int, default=0)
+    parser.add_argument("--write_image", type=int, default=5)
     parser.add_argument("--write_lambda", type=bool, default=True)
     parser.add_argument("--seed", type=int, default=1)
 

@@ -36,7 +36,7 @@ def gen_fastMRI_h5_dataset():
     ''' 
     source_dir='data/brain/multicoil_train' 
     output_file = 'data/fastmri_dataset_small.hdf5'
-    filenames_dir = 'data/filenames.mat'
+    filenames_dir = 'filenames.mat'
     # Length of train_filenames: 135
     # Length of val_filenames: 34 
     train_filenames = sio.loadmat(filenames_dir)['train_filenames']
@@ -121,7 +121,7 @@ def gen_trn_loss_mask():
     # Shape: (2500, 396, 768), Type: int8
     # Shape: (2500, 396, 768), Type: int8
     with h5py.File(output_file, 'a') as h5_combined:
-        for _ in range(2500):
+        for _ in range(500):
             try:
                 trn_mask, loss_mask = ssdumask.Gaussian_selection()
                 trn_mask, loss_mask  = trn_mask[None, ...], loss_mask[None, ...]
