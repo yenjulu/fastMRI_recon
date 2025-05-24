@@ -57,9 +57,9 @@ scripts/test.sh
 
 # Varnet
 
-<img src="images/Varnet_model.png" alt="Example Image" width="350">
+<img src="images/1Varnet_model.png" alt="Example Image" width="400">
 
-<img src="images/Varnet_psnr.png" alt="Example Image" width="350">
+<img src="images/1Varnet_psnr.png" alt="Example Image" width="400">
 
 ## Reference paper
 
@@ -73,7 +73,7 @@ The same path as described in MoDL
 
 Official code:  https://github.com/byaman14/SSDU (TensorFlow)
 
-<img src="images/SSDU_model.png" alt="Example Image" width="350">
+<img src="images/1SSDU_model.png" alt="Example Image" width="400">
 
 ## Reference paper
 
@@ -85,10 +85,10 @@ The same path as described in MoDL
 
 # Comparison tables and trainable parameter counts
 
-<img src="images/compare tables.png" alt="Example Image" width="350">
+<img src="images/1compare tables.png" alt="Example Image" width="400">
 
 # Recontrcucted images
 
-<img src="images/img_modl_varnet.png" alt="Example Image" width="350">
+<img src="images/1img_modl_varnet.png" alt="Example Image" width="400">
 
-<img src="images/img_ssdu.png" alt="Example Image" width="350">
+<img src="images/1img_ssdu.png" alt="Example Image" width="400">
