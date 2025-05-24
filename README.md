@@ -16,9 +16,9 @@ Conducting comprehensive evaluations that include:
 
 Official code: https://github.com/hkaggarwal/modl
 
-<img src="images/MoDL_model.png" alt="Example Image" width="200">
-<img src="images/MoDL_psnr_K.png" alt="Example Image" width="200">
-<img src="images/MoDL_psnr_N.png" alt="Example Image" width="200">
+<img src="images/MoDL_model.png" alt="Example Image" width="350"><img src="images/MoDL_psnr_K.png" alt="Example Image" width="350"><img src="images/MoDL_psnr_N.png" alt="Example Image" width="350">
+
+
 <img src="images/modl_psnr.PNG" alt="Example Image" width="500">
 
 
