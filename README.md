@@ -21,6 +21,7 @@ Official code: https://github.com/hkaggarwal/modl
 <img src="images/MoDL_psnr_N.png" alt="Example Image" width="400">
 
 
+
 ## Reference paper
 
 MoDL: Model Based Deep Learning Architecture for Inverse Problems  by H.K. Aggarwal, M.P Mani, and Mathews Jacob in IEEE Transactions on Medical Imaging,  2018 
