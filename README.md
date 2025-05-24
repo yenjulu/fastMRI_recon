@@ -17,10 +17,8 @@ Conducting comprehensive evaluations that include:
 Official code: https://github.com/hkaggarwal/modl
 
 <img src="images/MoDL_model.png" alt="Example Image" width="350">
-<img src="images/MoDL_psnr_K.png" alt="Example Image" width="350"><img src="images/MoDL_psnr_N.png" alt="Example Image" width="350">
-
-
-<img src="images/modl_psnr.PNG" alt="Example Image" width="500">
+<img src="images/MoDL_psnr_K.png" alt="Example Image" width="350">
+<img src="images/MoDL_psnr_N.png" alt="Example Image" width="350">
 
 
 ## Reference paper
@@ -59,9 +57,9 @@ scripts/test.sh
 
 # Varnet
 
-<img src="images/Varnet_model.png" alt="Example Image" width="500">
+<img src="images/Varnet_model.png" alt="Example Image" width="350">
 
-<img src="images/Varnet_psnr.png" alt="Example Image" width="500">
+<img src="images/Varnet_psnr.png" alt="Example Image" width="350">
 
 ## Reference paper
 
@@ -75,7 +73,7 @@ The same path as described in MoDL
 
 Official code:  https://github.com/byaman14/SSDU (TensorFlow)
 
-<img src="images/SSDU_model.png" alt="Example Image" width="500">
+<img src="images/SSDU_model.png" alt="Example Image" width="350">
 
 ## Reference paper
 
@@ -87,10 +85,10 @@ The same path as described in MoDL
 
 # Comparison tables and trainable parameter counts
 
-<img src="images/compare tables.png" alt="Example Image" width="500">
+<img src="images/compare tables.png" alt="Example Image" width="350">
 
 # Recontrcucted images
 
-<img src="images/img_modl_varnet.png" alt="Example Image" width="500">
+<img src="images/img_modl_varnet.png" alt="Example Image" width="350">
 
-<img src="images/img_ssdu.png" alt="Example Image" width="500">
+<img src="images/img_ssdu.png" alt="Example Image" width="350">
